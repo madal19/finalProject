@@ -1,0 +1,10 @@
+frames: 120
+speed: 30 fps
+2 
+
+Circle
+r:10
+x:50
+y:50
+color: 255
+effect
