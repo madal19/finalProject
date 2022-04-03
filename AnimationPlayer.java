@@ -18,7 +18,7 @@ class AnimationPlayer {
          counter++;
          if(counter==4)
          {
-           
+           yo
          }
         System.out.println(data);
       }
