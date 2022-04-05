@@ -1,36 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package animation;
 
-import java.awt.*;
-import javax.swing.*;
+import java.util.concurrent.TimeUnit;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+/**
  *
  * @author Arvind
  */
 public class MyPanel extends JPanel implements ActionListener{
-Timer timer;
-   final int PANEL_WIDTH= 400;
-   final int PANEL_HEIGHT= 300;
-   int xVelocity=1;
-   int yVelocity=1;
+  Timer timer;
+  final int PANEL_WIDTH= 400;
+  final int PANEL_HEIGHT= 300;
+  int xVelocity=1;
+  int yVelocity=1;
+  int timelength = 10;
+  
    int x=0;
    int y=2;
+   int timespan= PANEL_WIDTH / 100 ;
    
    int xnew=100;//for jump effect
    int ynew=200;//for jump effect
+           
+   //int radius=c[i].getR(); //only for circle
+   int r=50;
+   String choice="circle"; //choice 
+   String Effect="hide";
+   //long startTime = System.currentTimeMillis();
+   //long end = System.currentTimeMillis() + timespan*1000;
     
-    //int radius=c[i].getR(); //only for circle
-    int r=50;
-    String choice="circle"; //choice 
-    String Effect="hide";    
+    
     MyPanel(){
+       
         this.setPreferredSize(new Dimension(PANEL_WIDTH,PANEL_HEIGHT));
         this.setBackground(Color.black);
-        timer= new Timer(10, this);
+        timer= new Timer(timelength, this);
         timer.start();
+
+      
     }
     
-     public void paint(Graphics g){
+    public void paint(Graphics g){
 
       super.paint(g);//backround 
       
@@ -60,12 +75,25 @@ Timer timer;
     }
    @Override
     public void actionPerformed(ActionEvent e){
-       if(x>=PANEL_WIDTH-r*2 || x<0){
-          xVelocity= xVelocity * -1;
-       }
-      x=x+xVelocity;
         
-      if(Effect=="jump"){ //for the jump effect
+       
+
+        if (System.currentTimeMillis() >= end)
+        {
+            System.exit(0);
+        }
+        
+        
+        if(x>=PANEL_WIDTH-r*2 || x<0){
+           xVelocity= xVelocity * -1;
+        
+        
+        }
+
+
+            x=x+xVelocity;
+        
+     if(Effect=="jump"){ //for the jump effect
          x=xnew;
         y=ynew;
         }
@@ -75,4 +103,3 @@ Timer timer;
     }
 
 }
-
