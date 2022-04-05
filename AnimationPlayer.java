@@ -14,6 +14,7 @@ public class AnimationPlayer {
  AnimationPlayer(){   
  }
  
+    //interrupted exception
  
  
  public void run() throws InterruptedException{
