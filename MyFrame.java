@@ -1,27 +1,27 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package animation;
 import java.awt.*;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 /**
  *
  * @author Arvind
  */
 public class MyFrame extends JFrame{
-   String shape;
+
    MyPanel panel;
-   MyFrame(){
+   MyFrame() throws InterruptedException{
        panel= new MyPanel();
          this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-         
-         
          this.add(panel);
          this.pack();
          this.setLocationRelativeTo(null);
-         this.setVisible(false);     
+         this.setVisible(true);   
+   
      }
-
+  
     
    
 }
