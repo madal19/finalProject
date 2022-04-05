@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package animation;
+//package animation;
 
 import java.util.concurrent.TimeUnit;
 import java.awt.*;
@@ -78,10 +78,10 @@ public class MyPanel extends JPanel implements ActionListener{
         
        
 
-        if (System.currentTimeMillis() >= end)
-        {
-            System.exit(0);
-        }
+        //if (System.currentTimeMillis() >= end)
+        //{
+        //    System.exit(0);
+        //}
         
         
         if(x>=PANEL_WIDTH-r*2 || x<0){
