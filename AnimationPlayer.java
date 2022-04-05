@@ -1,19 +1,26 @@
-import java.awt.*;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package animation;
 
-public class Animation
-{
+/**
+ *
+ * @author Arvind
+ */
+public class AnimationPlayer {
 
     
-    public static void main(String[] args) {
-        MyFrame f= new MyFrame();
-     
-    }
-  
-    
+ AnimationPlayer(){   
+ }
+ 
+ 
+ 
+ public void run() throws InterruptedException{
+    MyFrame f= new MyFrame();
+   Thread.sleep(10000);  
+    f.dispose();
+        
+ }
+   
 }
-
-
